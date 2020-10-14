@@ -1,11 +1,14 @@
-<h1>Sign Up</h1>
-
-<%= form_with model:@user, method: 'post' do |f| %>
-  <%= label(:user, :username) %><br>
-  <%= f.text_field :username %><br>
-  <%= label(:user, :password) %><br>
-  <%= f.password_field :password %><br><br>
-  <%= f.submit "Create" %>
+<% if logged_in? %>
+  <h1>You already Logged as: <%= current_user.username %></h1>
+<% else %>
+  <h1>Sign Up</h1>
+  <%= form_with model:@user, method: 'post' do |f| %>
+    <%= label(:user, :username) %><br>
+    <%= f.text_field :username %><br>
+    <%= label(:user, :password) %><br>
+    <%= f.password_field :password %><br><br>
+    <%= f.submit "Create" %>
+  <% end %>
 <% end %>
 <br>
 <%= link_to "Home", root_path %>
