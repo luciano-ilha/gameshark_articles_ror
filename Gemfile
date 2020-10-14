@@ -9,6 +9,7 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 6.0'
+# Use Bootstrap for style
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -16,6 +17,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'hirb', '~> 0.7.3'
 # Postgres gem
 gem 'pg', '~> 1.2', '>= 1.2.3'
+# Bcrypt gem
+gem 'bcrypt', '~> 3.1', '>= 3.1.16'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
