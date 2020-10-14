@@ -2,6 +2,7 @@
 
 <% if logged_in? %>
   <h1>You are Logged In, <%= current_user.username %></h1>
+  <%= button_to "Logout", '/logout', method: :delete %><br>
   <%= button_to "Delete", '/users/new', confirm: "Are you sure?", method: :delete %><br>
 <% end %>
 
