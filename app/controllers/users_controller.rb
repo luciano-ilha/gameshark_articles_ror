@@ -19,9 +19,21 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user = User.find(user_params)
+    if @user.destroy
+      flash[:success] = 'User was successfully deleted.'
+      redirect_to new_user_path
+    else
+      flash[:error] = 'Something went wrong'
+      redirect_to welcome_path
+    end
+  end
+  
+
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:id, :username, :password)
   end
 end
