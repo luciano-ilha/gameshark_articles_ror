@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   
   def create
     @user = User.create(user_params)
-    if @object.save
+    if @user.save
       flash[:success] = "User successfully created"
       session[:user_id] = @user.id
       redirect_to root_path
@@ -20,10 +20,10 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.find(user_params)
+    @user = User.find(current_user.id)
     if @user.destroy
       flash[:success] = 'User was successfully deleted.'
-      redirect_to new_user_path
+      redirect_to root_path
     else
       flash[:error] = 'Something went wrong'
       redirect_to welcome_path
@@ -34,6 +34,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:id, :username, :password)
+    params.require(:user).permit(:username, :password)
   end
 end
