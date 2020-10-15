@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GamesharkArticlesRor</title>
+    <title>Gameshark Articles Ror</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +11,8 @@
 
   <body>
     <div class = "container">
+      <p><%= flash[:success] %></p>
+      <p><%= flash[:error] %></p>
       <%= yield %>
     </div>
   </body>

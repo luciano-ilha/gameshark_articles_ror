@@ -4,19 +4,26 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(params[:article])
+    user = User.find(session[:user_id])
+    @article = user.articles.new(article_params)
+
     if @article.save
       flash[:success] = "Article successfully created"
-      redirect_to root_path
+      redirect_to article_path(@article.id)
     else
       flash[:error] = "Something went wrong"
       render new_article_path
     end
   end
+
+  def show
+    @article = Article.find(params[:id])
+  end
+  
   
   def update
     @article = Article.find(params[:id])
-      if @article.update_attributes(params[:article])
+      if @article.update_attributes(article_params)
         flash[:success] = "Article was successfully updated"
         redirect_to root_path
       else
@@ -34,5 +41,11 @@ class ArticlesController < ApplicationController
       flash[:error] = 'Something went wrong'
       redirect_to root_path
     end
+  end
+
+  private
+
+  def article_params
+    params.require(:article).permit(:title, :text)
   end
 end

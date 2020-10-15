@@ -1,6 +1,7 @@
 <% if logged_in? %>
   <h1>New Article</h1>
-
+  <h4><%= current_user.username %></h4>
+ 
   <%= form_with model:@article, method: 'post' do |f| %>
     <%= label(:article, :title) %>
     <%= f.text_field :title, size: "50" %>

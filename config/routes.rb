@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get 'welcome', to: 'sessions#welcome'
   delete 'logout' => 'sessions#destroy'
   
-  resources :articles, only: [:new, :create, :update, :destroy]
+  resources :articles, only: [:new, :create, :show, :update, :destroy]
 end
