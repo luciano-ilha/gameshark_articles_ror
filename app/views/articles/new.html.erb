@@ -7,6 +7,8 @@
     <%= f.text_field :title, size: "50" %>
     <%= label(:article, :text) %>
     <%= f.text_area :text, size: "50x10" %>
+    <%= label(:article, :image) %>
+    <%= f.file_field :image %>
     <%= f.submit "Create Article" %>
   <% end %>
 <% else %>
