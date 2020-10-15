@@ -1,0 +1,14 @@
+<h1>All Articles</h1>
+
+<% @articles.each do |a| %>
+  <%= a.title %><br>
+<% end %>
+<% if logged_in? %>
+  <h1><%= current_user.username %>' Articles</h1>
+
+  <% current_user.articles.each do |a| %>
+    <%= a.title %><br>
+  <% end %>
+  <%= button_to "User", '/welcome', method: :get %>
+<% end %>
+<%= button_to "Home", '/', method: :get %>

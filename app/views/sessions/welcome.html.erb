@@ -2,9 +2,10 @@
 
 <% if logged_in? %>
   <h1>You are Logged In, <%= current_user.username %></h1>
+  <%= button_to "Articles", '/articles', method: :get %>
   <%= button_to "New Article", '/articles/new', method: :get %>
   <%= button_to "Logout", '/logout', method: :delete %>
-  <%= button_to "Delete", '/users/new', method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= button_to "Delete User", '/users/new', method: :delete, data: { confirm: "Are you sure?" } %>
 <% end %>
 
 <%= button_to "Home", '/', method: :get %>
