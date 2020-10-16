@@ -24,12 +24,15 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
   
-  
+  def edit
+    @article = Article.find(params[:id])
+  end
+
   def update
     @article = Article.find(params[:id])
       if @article.update_attributes(article_params)
         flash[:success] = "Article was successfully updated"
-        redirect_to root_path
+        redirect_to article_path(@article.id)
       else
         flash[:error] = "Something went wrong"
         render article_path
@@ -50,6 +53,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :text, :image)
+    params.require(:article).permit(:title, :text)
   end
 end

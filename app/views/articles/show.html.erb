@@ -1,4 +1,9 @@
-<h1><%= current_user.username %>'s Article</h1>
+<% if logged_in? %>
+  <h1><%= current_user.username %>'s Article</h1>
+  <%= button_to "Edit Article", edit_article_path(@article.id), method: :get %>
+<% else %>
+  <h1><%= @article.author.username %>'s Article</h1>
+<% end %>
 
 <h4><%= @article.title %></h4>
 <%= @article.text %>
