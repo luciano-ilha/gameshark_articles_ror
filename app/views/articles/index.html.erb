@@ -1,5 +1,5 @@
 <h1>All Articles</h1>
-
+<br>
 <% @articles.each do |a| %>
   <h5><%= link_to "#{a.title}", article_path(a.id) %></h5>
 <% end %>
@@ -10,6 +10,7 @@
     <h5><%= link_to "#{a.title}", article_path(a.id) %></h5>
   <% end %>
   <br>
-  <%= button_to "User", '/welcome', method: :get %><br>
+  <%= button_to "User", '/welcome', method: :get %>
 <% end %>
+<br>
 <%= button_to "Home", '/', method: :get %>

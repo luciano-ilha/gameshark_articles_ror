@@ -7,10 +7,10 @@ class SessionsController < ApplicationController
 
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect_to '/welcome'
+      redirect_to welcome_path
     else
-      flash[:error] = 'Something went wrong'
-      redirect_to '/login'
+      flash[:error] = 'You have to Sign Up first!'
+      redirect_to new_user_path
     end
   end
 
