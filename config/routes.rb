@@ -8,5 +8,10 @@ Rails.application.routes.draw do
   get 'welcome', to: 'sessions#welcome'
   delete 'logout' => 'sessions#destroy'
   
-  resources :articles
+  resources :articles do
+    member do
+      put "like" => "articles#upvote"
+      put "unlike" => "articles#downvote"
+    end
+  end
 end

@@ -23,6 +23,8 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.16'
 gem 'activestorage'
 # Mini Magick gem
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
+# Acts_as_votable gem
+gem 'acts_as_votable', '~> 0.12.1'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 

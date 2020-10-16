@@ -50,6 +50,18 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def upvote
+    @article = Article.find(params[:id])
+    @article.upvote_from current_user
+    redirect_to articles_path
+  end
+
+  def downvote
+    @article = Article.find(params[:id])
+    @article.downvote_from current_user
+    redirect_to articles_path
+  end
+
   private
 
   def article_params
