@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
   def create
     user = User.find(session[:user_id])
     @article = user.articles.new(article_params)
-
+    
     if @article.save
       flash[:success] = "Article successfully created"
       redirect_to article_path(@article.id)
@@ -53,6 +53,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :text)
+    params.require(:article).permit(:title, :text, :image)
   end
 end

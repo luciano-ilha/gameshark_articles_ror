@@ -19,6 +19,10 @@ gem 'hirb', '~> 0.7.3'
 gem 'pg', '~> 1.2', '>= 1.2.3'
 # Bcrypt gem
 gem 'bcrypt', '~> 3.1', '>= 3.1.16'
+# Active Storage gem
+gem 'activestorage'
+# Mini Magick gem
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 

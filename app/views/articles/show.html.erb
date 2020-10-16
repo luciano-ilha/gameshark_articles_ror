@@ -3,6 +3,7 @@
     <h1><%= current_user.username %>'s Article</h1><br>
     <h4><%= @article.title %></h4>
     <%= @article.text %><br><br>
+    <%= image_tag @article.image.variant(resize: '300x300') %>
     <%= button_to "Edit Article", edit_article_path(@article.id), method: :get %><br>
     <%= button_to "Delete Article", "/articles/#{@article.id}", method: :delete, data: { confirm: "Are you sure?" } %><br>
   <% else %>

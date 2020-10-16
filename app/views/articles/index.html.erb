@@ -2,12 +2,14 @@
 <br>
 <% @articles.each do |a| %>
   <h5><%= link_to "#{a.title}", article_path(a.id) %></h5>
+  <p>by <%= a.author.username %></p>
 <% end %>
 <% if logged_in? %>
   <h1><%= current_user.username %>' Articles</h1>
 
   <% current_user.articles.each do |a| %>
     <h5><%= link_to "#{a.title}", article_path(a.id) %></h5>
+    <p>by <%= a.author.username %></p>
   <% end %>
   <br>
   <%= button_to "User", '/welcome', method: :get %>
