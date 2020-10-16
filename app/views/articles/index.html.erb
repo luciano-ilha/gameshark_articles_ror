@@ -1,14 +1,15 @@
 <h1>All Articles</h1>
 
 <% @articles.each do |a| %>
-  <%= a.title %><br>
+  <h5><%= link_to "#{a.title}", article_path(a.id) %></h5>
 <% end %>
 <% if logged_in? %>
   <h1><%= current_user.username %>' Articles</h1>
 
   <% current_user.articles.each do |a| %>
-    <%= a.title %><br>
+    <h5><%= link_to "#{a.title}", article_path(a.id) %></h5>
   <% end %>
-  <%= button_to "User", '/welcome', method: :get %>
+  <br>
+  <%= button_to "User", '/welcome', method: :get %><br>
 <% end %>
 <%= button_to "Home", '/', method: :get %>

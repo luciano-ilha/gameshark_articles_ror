@@ -1,14 +1,14 @@
 <% if logged_in? %>
   <h1>New Article</h1>
   <h4><%= current_user.username %></h4>
- 
+  <br>
   <%= form_with model:@article, method: 'post' do |f| %>
-    <%= label(:article, :title) %>
-    <%= f.text_field :title, size: "50" %>
-    <%= label(:article, :text) %>
-    <%= f.text_area :text, size: "50x10" %>
+    <%= label(:article, :title) %><br>
+    <%= f.text_field :title, size: "50" %><br><br>
+    <%= label(:article, :text) %><br>
+    <%= f.text_area :text, size: "50x10" %><br><br>
     <%= label(:article, :image) %>
-    <%= f.file_field :image %>
+    <%= f.file_field :image %><br>
     <%= f.submit "Create Article" %>
   <% end %>
 <% else %>
@@ -16,4 +16,5 @@
   <%= button_to "Sign Up", '/users/new', method: :get %>
   <%= button_to "Login", '/login', method: :get %>
 <% end %>
+<br>
 <%= button_to "Home", '/', method: :get %>

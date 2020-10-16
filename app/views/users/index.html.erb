@@ -1,10 +1,10 @@
 <h1>This is the Homepage</h1>
 
 <% if logged_in? %>
-  <h4><%= current_user.username %></h4>
-  <%= button_to "User", '/welcome', method: :get %>
-  <%= button_to "Articles", '/articles', method: :get %>
-  <%= button_to "New Article", '/articles/new', method: :get %>
+  <h4><%= current_user.username %></h4><br>
+  <%= button_to "User", '/welcome', method: :get %><br>
+  <%= button_to "Articles", '/articles', method: :get %><br>
+  <%= button_to "New Article", '/articles/new', method: :get %><br>
   <%= button_to "Logout", '/logout', method: :delete %>
 <% else %>
   <%= button_to "Articles", '/articles', method: :get %>
