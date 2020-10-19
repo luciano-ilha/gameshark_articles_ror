@@ -2,6 +2,8 @@
   <% if current_user == @article.author %>
     <h1><%= current_user.username %>'s Article</h1>
     <br>
+    <h3><%= @article.category.name %> Category</h3>
+    <br>
     <%= image_tag @article.image.variant(resize: '300x300') %>
     <br><br>
     <h4><%= @article.title %></h4>
