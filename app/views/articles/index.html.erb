@@ -3,15 +3,54 @@
   <p><%= link_to "#{@articles.first.text.truncate(250, separator: ' ')}", article_path(@articles.first.id) %></p>
 </div>
 <div class="cat-row">
-  <div class="cat-row-item1" style="background-image: url(<%= rails_blob_url(@art_arr1[-1].image) %>)">
-    <h2><%= link_to "#{@art_arr1[-1].category.name}", article_path(@art_arr1[-1].id) %></h2>
-    <h3><%= link_to "#{@art_arr1[-1].title}", article_path(@art_arr1[-1].id) %></h3>
+  <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_arr1[-1].image) %>)">
+    <h2>
+      <%= link_to "#{@art_arr1[-1].category.name}", article_path(@art_arr1[-1].id) %>
+    </h2>
+    <h3>
+      <%= link_to "#{@art_arr1[-1].title}", article_path(@art_arr1[-1].id) %>
+    </h3>
   </div>
-  <div class="cat-row-item2"></div>
-  <div class="cat-row-item3"></div>
-  <div class="cat-row-item4"></div>
-  <div class="cat-row-item5"></div>
-  <div class="cat-row-item6"></div>
+  <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_arr2[-1].image) %>)">
+    <h2>
+      <%= link_to "#{@art_arr2[-1].category.name}", article_path(@art_arr2[-1].id) %>
+    </h2>
+    <h3>
+      <%= link_to "#{@art_arr2[-1].title}", article_path(@art_arr2[-1].id) %>
+    </h3>
+  </div>
+  <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_arr3[-1].image) %>)">
+    <h2>
+      <%= link_to "#{@art_arr3[-1].category.name}", article_path(@art_arr3[-1].id) %>
+    </h2>
+    <h3>
+      <%= link_to "#{@art_arr3[-1].title}", article_path(@art_arr3[-1].id) %>
+    </h3>
+  </div>
+  <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_arr4[-1].image) %>)">
+    <h2>
+      <%= link_to "#{@art_arr4[-1].category.name}", article_path(@art_arr4[-1].id) %>
+    </h2>
+    <h3>
+      <%= link_to "#{@art_arr4[-1].title}", article_path(@art_arr4[-1].id) %>
+    </h3>
+  </div>
+  <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_arr5[-1].image) %>)">
+    <h2>
+      <%= link_to "#{@art_arr5[-1].category.name}", article_path(@art_arr5[-1].id) %>
+    </h2>
+    <h3>
+      <%= link_to "#{@art_arr5[-1].title}", article_path(@art_arr5[-1].id) %>
+    </h3>
+  </div>
+  <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_arr6[-1].image) %>)">
+    <h2>
+      <%= link_to "#{@art_arr6[-1].category.name}", article_path(@art_arr6[-1].id) %>
+    </h2>
+    <h3>
+      <%= link_to "#{@art_arr6[-1].title}", article_path(@art_arr6[-1].id) %>
+    </h3>
+  </div>
 </div>
 
 <% Category.all.each do |category| %>

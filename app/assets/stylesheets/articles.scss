@@ -38,7 +38,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   height: 28rem;
-  &-item1 {
+  &-item {
     background-position: center;
     background-size: cover;
     h2 {
@@ -55,12 +55,13 @@
         color: white;
       }
     }
-
     h3 {
+      width: 90%;
+      line-height: 1.8rem;
       a {
         left: 1.5rem;
         top: 13rem;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         position: relative;
         display: inline-block;
         background-color: rgba(0, 0, 0, 0.5);
