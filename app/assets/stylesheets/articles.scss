@@ -3,24 +3,17 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .main-article {
-  height: 50rem;
+  height: 55rem;
   background-size: cover;
-  img {
-    position: absolute;
-    height: 50rem;
-    width: 100%;
-    z-index: -1;
-  }
   p,
   h1 {
     display: inline-block;
     position: relative;
     left: 5rem;
-    top: 32rem;
+    top: 35rem;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 0.8rem;
     border-radius: 1rem;
-    overflow: hidden;
   }
   h1 {
     a {
@@ -44,9 +37,37 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  height: 25rem;
+  height: 28rem;
   &-item1 {
     background-position: center;
     background-size: cover;
+    h2 {
+      a {
+        left: 1.5rem;
+        text-decoration: underline;
+        text-decoration-color: #FA6000;
+        font-size: 1.9rem;
+        position: relative;
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0.8rem;
+        border-radius: 1rem;
+        color: white;
+      }
+    }
+
+    h3 {
+      a {
+        left: 1.5rem;
+        top: 13rem;
+        font-size: 1.3rem;
+        position: relative;
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0.8rem;
+        border-radius: 1rem;
+        color: white;
+      }
+    }
   }
 }
