@@ -1,3 +1,40 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.main-article {
+  height: 50rem;
+  img {
+    position: absolute;
+    height: 50rem;
+    width: 100%;
+    z-index: -1;
+  }
+  p,
+  h1 {
+    display: inline-block;
+    position: relative;
+    left: 5rem;
+    top: 32rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.8rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  h1 {
+    a {
+      color: #FA6000;
+      font-size: 3rem;
+    }
+    a:hover {
+      color: #ff9d60;
+    }
+  }
+  p {
+    width: 93%;
+    a {
+      color: white;
+      font-size: 1.7rem;
+    }
+  }
+}

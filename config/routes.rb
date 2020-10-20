@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'users#index'
+  root 'articles#index'
 
   resources :users, only: [:new, :create, :destroy]
   
@@ -14,4 +14,6 @@ Rails.application.routes.draw do
       put "unlike" => "articles#downvote"
     end
   end
+
+  resources :categories, only: [:show]
 end

@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all.order(:cached_votes_score => :desc)
+
   end
 
   def new

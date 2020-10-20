@@ -1,4 +1,8 @@
-<h1>All Articles</h1>
+<div class="main-article">
+  <%= image_tag @articles.first.image %>
+  <h1><%= link_to "#{@articles.first.title}", article_path(@articles.first.id) %></h1>
+  <p><%= link_to "#{@articles.first.text.truncate(250, separator: ' ')}", article_path(@articles.first.id) %></p>
+</div>
 <br>
 <% Category.all.each do |category| %>
   <h3><%= category.name %> Category</h3>
