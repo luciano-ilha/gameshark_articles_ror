@@ -1,7 +1,13 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all.order(:cached_votes_score => :desc)
-
+    @upd_art = Article.all.order(:created_at)
+    @art_arr1 = []
+    @upd_art.each do |a|
+      if a.category.priority == 1
+        @art_arr1 << a
+      end
+    end
   end
 
   def new

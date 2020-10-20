@@ -4,6 +4,7 @@
 
 .main-article {
   height: 50rem;
+  background-size: cover;
   img {
     position: absolute;
     height: 50rem;
@@ -25,9 +26,9 @@
     a {
       color: #FA6000;
       font-size: 3rem;
-    }
-    a:hover {
-      color: #ff9d60;
+      &:hover {
+        color: #ff9d60;
+      }
     }
   }
   p {
@@ -36,5 +37,16 @@
       color: white;
       font-size: 1.7rem;
     }
+  }
+}
+
+.cat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: 25rem;
+  &-item1 {
+    background-position: center;
+    background-size: cover;
   }
 }

@@ -66,9 +66,9 @@ a:-webkit-any-link {
       a {
         color: #847F7B;
         font-size: 1.7rem;
-      }
-      a:hover {
-        color: #FA7C37;
+        &:hover {
+          color: #FA7C37;
+        }
       }
     }
     .nav-right {
@@ -79,9 +79,9 @@ a:-webkit-any-link {
         font-size: 1.5rem;
         background-color: #FA7C37;
         color: white;
-      }
-      .btn:hover {
-        background-color: #847F7B;
+        &:hover {
+          background-color: #847F7B;
+        }
       }
       img {
         width: 3rem;
