@@ -10,5 +10,34 @@
   &-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    &-img {
+      background-position: center;
+      background-size: cover;
+    }
+    &-content {
+      h3 {
+        a {
+          font-family: 'Nunito-Regular';
+          font-weight: bold;
+          text-decoration: underline;
+          text-decoration-color: #FA6000;
+          font-size: 1.7rem;
+          display: inline-block;
+          padding: 0.8rem;
+          color: black
+        }
+      }
+      p {
+        line-height: 1.8rem;
+        a {
+          font-family: 'Nunito-Regular';
+          font-weight: bold;
+          font-size: 1.4rem;
+          display: inline-block;
+          padding: 0.8rem;
+          color: black;
+        }
+      }
+    }
   }
 }
