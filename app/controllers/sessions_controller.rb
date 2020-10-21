@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect_to welcome_path
+      redirect_to root_path
     else
       flash[:error] = 'You have to Sign Up first!'
       redirect_to new_user_path
@@ -21,8 +21,5 @@ class SessionsController < ApplicationController
   end
 
   def login
-  end
-
-  def welcome
   end
 end

@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
-  get 'welcome', to: 'sessions#welcome'
   delete 'logout' => 'sessions#destroy'
   
   resources :articles do

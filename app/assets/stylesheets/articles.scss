@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-// index page
+// Index page
 .main-article {
   height: 55rem;
   background-size: cover;
@@ -80,8 +80,7 @@
   }
 }
 
-// show page
-
+// Show page
 .art-image {
   display: flex;
   flex-direction: column;
@@ -133,5 +132,28 @@
     &:hover {
       background-color: #847F7B;
     }
+  }
+}
+
+// New article page
+.new-art-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60rem;
+  h1,
+  span {
+  display: block;
+  font-family: 'Nunito-Regular';
+  font-weight: bolder;
+  }
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  span {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 }
