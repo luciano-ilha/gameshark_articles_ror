@@ -1,15 +1,11 @@
-<% if logged_in? %>
-  <% if current_user == @article.author %>
-    <h1><%= current_user.username %>'s Article</h1>
-    <br>
-    <h3><%= @article.category.name %> Category</h3>
-    <br>
-    <%= image_tag @article.image.variant(resize: '300x300') %>
-    <br><br>
-    <h4><%= @article.title %></h4>
-    <%= @article.text %>
-    <br><br>
-
+<div class="art-image" style="background-image: url(<%= rails_blob_url(@article.image) %>)">
+  <h2><%= @article.category.name %></h2>
+  <h1><%= @article.title %></h1>
+</div>
+<div class="art-container container">
+  <p><%= @article.text %></p>
+  <p>Written by <%= @article.author.username %></p>
+  <% if logged_in? %>
     <%= link_to like_article_path(@article), class: "like", method: :put do %>
       <button type="button" class="btn btn-info" aria-label="Left Align">
         <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
@@ -22,42 +18,10 @@
         <span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
         <span class="badge"><%= @article.get_downvotes.size %></span>
       </button>
-    <% end %>
-    <br><br>
-    <%= button_to "Edit Article", edit_article_path(@article.id), method: :get %><br>
-    <%= button_to "Delete Article", "/articles/#{@article.id}", method: :delete, data: { confirm: "Are you sure?" } %>
-  <% else %>
-    <h1><%= @article.author.username %>'s Article</h1>
-    <br>
-    <%= image_tag @article.image.variant(resize: '300x300') %>
-    <br><br>
-    <h4><%= @article.title %></h4>
-    <%= @article.text %>
-    <br><br>
-
-    <%= link_to like_article_path(@article), class: "like", method: :put do %>
-      <button type="button" class="btn btn-info" aria-label="Left Align">
-        <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
-        <span class="badge"><%= @article.get_upvotes.size %></span>
-      </button>
-    <% end %>
-
-    <%= link_to unlike_article_path(@article), class: "like", method: :put do %>
-      <button type="button" class="btn btn-info" aria-label="Left Align">
-        <span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
-        <span class="badge"><%= @article.get_downvotes.size %></span>
-      </button>
-      <br>
     <% end %>
   <% end %>
-<% else %>
-  <h1><%= @article.author.username %>'s Article</h1>
-  <br>
-  <%= image_tag @article.image.variant(resize: '300x300') %>
-  <br><br>
-  <h4><%= @article.title %></h4>
-  <%= @article.text %>
-  <br>
-<% end %>
-<br>
-<%= button_to "Home", '/', method: :get %>
+  <% if current_user == @article.author %>
+    <%= link_to 'Edit Article', edit_article_path, class: "btn btn-default" %>
+    <%= link_to 'Delete Article', "/articles/#{@article.id}", class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
+</div>

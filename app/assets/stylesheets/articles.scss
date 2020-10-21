@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+// index page
 .main-article {
   height: 55rem;
   background-size: cover;
@@ -13,7 +14,7 @@
     position: relative;
     left: 5rem;
     top: 35rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 0.8rem;
     border-radius: 1rem;
   }
@@ -53,7 +54,7 @@
         font-size: 1.9rem;
         position: relative;
         display: inline-block;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         padding: 0.8rem;
         border-radius: 1rem;
         color: white;
@@ -70,11 +71,67 @@
         font-size: 1.4rem;
         position: relative;
         display: inline-block;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         padding: 0.8rem;
         border-radius: 1rem;
         color: white;
       }
+    }
+  }
+}
+
+// show page
+
+.art-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 55rem;
+  background-size: cover;
+  h2 {
+    align-self: flex-start;
+    position: relative;
+    left: 25rem;
+    bottom: 15rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.8rem;
+    border-radius: 1rem;
+    text-decoration: underline;
+    text-decoration-color: #FA6000;
+  }
+  h1 {
+    font-family: 'Nunito-Regular';
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #FA6000;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.8rem;
+    border-radius: 1rem;
+  }
+}
+
+.art-container {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  width: 60%;
+  p {
+    font-family: 'Nunito-Regular';
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+  }
+  .btn {
+    font-family: 'Nunito-Regular';
+    font-weight: bold;
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+    background-color: #FA7C37;
+    color: white;
+    &:hover {
+      background-color: #847F7B;
     }
   }
 }
