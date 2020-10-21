@@ -25,9 +25,15 @@
         <%= link_to "Terror", root_path %>
       </div>
       <div class="navbar-container-right">
+        <% if logged_in? %>
+          <span><%= current_user.username %></span>
+          <%= link_to 'New Article', new_article_path, class: "btn btn-default" %>
+          <%= link_to 'Logout', logout_path, class: "btn btn-default", method: :delete %>
+        <% else %>
         <%= link_to 'Login', login_path, class: "btn btn-default" %>
         <%= link_to 'Register', new_user_path,class: "btn btn-default" %>
         <%= image_tag "search.png" %>
+        <% end %>
       </div>
     </div>
   </nav>

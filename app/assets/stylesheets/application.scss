@@ -102,6 +102,13 @@ a:-webkit-any-link {
     &-right {
       width: 30%;
       justify-content: flex-end;
+      span {
+        font-family: 'Nunito-Regular';
+        font-weight: bold;
+        font-size: 2rem;
+        color: #847F7B;
+        margin-right: 1.8rem;
+      }
       .btn {
         font-family: 'Nunito-Regular';
         font-weight: bold;
