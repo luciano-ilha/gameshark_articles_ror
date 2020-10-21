@@ -17,12 +17,12 @@
       </div>
       <div class="navbar-container-middle">
         <%= link_to "Home", root_path %>
-        <%= link_to "What's New", root_path %>
-        <%= link_to "Action", root_path %>
-        <%= link_to "Sports", root_path %>
-        <%= link_to "FPS", root_path %>
-        <%= link_to "RPG", root_path %>
-        <%= link_to "Terror", root_path %>
+        <%= link_to "What's New", category_path(1) %>
+        <%= link_to "Action", category_path(2) %>
+        <%= link_to "Sports", category_path(3) %>
+        <%= link_to "FPS", category_path(4) %>
+        <%= link_to "RPG", category_path(5) %>
+        <%= link_to "Terror", category_path(6) %>
       </div>
       <div class="navbar-container-right">
         <% if logged_in? %>
