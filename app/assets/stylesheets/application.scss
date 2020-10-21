@@ -21,6 +21,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Nunito-Regular';
+  src: url(font-path('Nunito-Regular.ttf')) format('truetype');
+}
+
 a:-webkit-any-link {
   text-decoration: none;
   cursor: pointer;
@@ -57,13 +62,27 @@ a:-webkit-any-link {
         margin-right: 1.8rem;
       }
       h2 {
+        font-family: 'Nunito-Regular';
+        font-weight: bolder;
         color: #4E443E;
+      }
+      p {
+        position: relative;
+        bottom: 1.8rem;
+        left: 0.3rem;
+        align-self: flex-end;
+        width: 1.3rem;
+        height: 1.3rem;
+        background-color: #F76108;
+        border-radius: 50%;
       }
     }
     .nav-middle {
       width: 40%;
       justify-content: space-evenly;
       a {
+        font-family: 'Nunito-Regular';
+        font-weight: bold;
         color: #847F7B;
         font-size: 1.7rem;
         &:hover {
@@ -75,6 +94,8 @@ a:-webkit-any-link {
       width: 30%;
       justify-content: flex-end;
       .btn {
+        font-family: 'Nunito-Regular';
+        font-weight: bold;
         margin-right: 1.5rem;
         font-size: 1.5rem;
         background-color: #FA7C37;

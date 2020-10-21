@@ -8,34 +8,37 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <%= image_tag "gamesharklogo.png" %>
+        <h2>gaMEsHArk</h2>
+        <p></p>
+      </div>
+      <div class="nav-middle">
+        <%= link_to "Home", root_path %>
+        <%= link_to "What's New", root_path %>
+        <%= link_to "Action", root_path %>
+        <%= link_to "Sports", root_path %>
+        <%= link_to "FPS", root_path %>
+        <%= link_to "RPG", root_path %>
+        <%= link_to "Terror", root_path %>
+      </div>
+      <div class="nav-right">
+        <%= link_to 'Login', login_path, class: "btn btn-default" %>
+        <%= link_to 'Register', new_user_path,class: "btn btn-default" %>
+        <%= image_tag "search.png" %>
+      </div>
+    </div>
+  </nav>
   <body>
     <p><%= flash[:success] %></p>
     <p><%= flash[:error] %></p>
-    <nav class="navbar">
-      <div class="nav-container">
-        <div class="nav-left">
-          <%= image_tag "gamesharklogo.png" %>
-          <h2>Game Shark</h2>
-        </div>
-        <div class="nav-middle">
-          <%= link_to "Home", root_path %>
-          <%= link_to "What's New", root_path %>
-          <%= link_to "Action", root_path %>
-          <%= link_to "Sports", root_path %>
-          <%= link_to "FPS", root_path %>
-          <%= link_to "RPG", root_path %>
-          <%= link_to "Terror", root_path %>
-        </div>
-        <div class="nav-right">
-          <%= link_to 'Login', login_path, class: "btn btn-default" %>
-          <%= link_to 'Register', new_user_path,class: "btn btn-default" %>
-          <%= image_tag "search.png" %>
-        </div>
-      </div>
-    </nav>
     <div class="main-container">
       <%= yield %>
     </div>
   </body>
+  <footer class="footer">
+
+  </footer>
 </html>

@@ -7,6 +7,8 @@
   background-size: cover;
   p,
   h1 {
+    font-family: 'Nunito-Regular';
+    font-weight: bold;
     display: inline-block;
     position: relative;
     left: 5rem;
@@ -43,6 +45,8 @@
     background-size: cover;
     h2 {
       a {
+        font-family: 'Nunito-Regular';
+        font-weight: bold;
         left: 1.5rem;
         text-decoration: underline;
         text-decoration-color: #FA6000;
@@ -59,6 +63,8 @@
       width: 90%;
       line-height: 1.8rem;
       a {
+        font-family: 'Nunito-Regular';
+        font-weight: bold;
         left: 1.5rem;
         top: 13rem;
         font-size: 1.4rem;
