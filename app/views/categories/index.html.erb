@@ -1,0 +1,22 @@
+<% Category.all.each do |category| %>
+  <h3><%= category.name %> Category</h3>
+  <% @articles.each do |a| %>
+    <% if category.name == a.category.name %>
+    <br>
+    <h5><%= link_to "#{a.title}", article_path(a.id) %></h5>
+    <p>by <%= a.author.username %></p>
+    <% end %>
+  <% end %>
+<% end %>
+<% if logged_in? %>
+  <h2><%= current_user.username %>' Articles</h2>
+  <br>
+  <% current_user.articles.each do |a| %>
+    <h5><%= link_to "#{a.title}", article_path(a.id) %></h5>
+    <p>by <%= a.author.username %></p>
+  <% end %>
+  <br>
+  <%= button_to "User", '/welcome', method: :get %>
+<% end %>
+<br>
+<%= button_to "Home", '/', method: :get %>
