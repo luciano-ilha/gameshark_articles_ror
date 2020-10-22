@@ -1,5 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "validations" do
+    let(:article) { FactoryBot.build(:article) }
+    it "should have a title" do
+      article.title = nil
+      expect(article).to_not be_valid  
+    end
+
+    it "should have a text" do
+      article.text = nil
+      expect(article).to_not be_valid  
+    end
+  end
 end
