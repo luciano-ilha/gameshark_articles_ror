@@ -62,22 +62,27 @@ a:-webkit-any-link {
   margin: 0 auto 2rem;
   padding: 0 5rem;
   height: 9rem;
+
   &-container {
     margin: 0 auto;
     height: 9rem;
     width: 98%;
+
     &-left {
       padding-right: 2rem;
       width: 30%;
+
       img {
         width: 12rem;
         margin-right: 1.8rem;
       }
+
       h2 {
         font-family: 'Nunito-Regular';
         font-weight: bolder;
-        color: #4E443E;
+        color: #4e443e;
       }
+
       p {
         position: relative;
         bottom: 1.8rem;
@@ -85,44 +90,52 @@ a:-webkit-any-link {
         align-self: flex-end;
         width: 1.3rem;
         height: 1.3rem;
-        background-color: #F76108;
+        background-color: #f76108;
         border-radius: 50%;
       }
     }
+
     &-middle {
       width: 40%;
       justify-content: space-evenly;
+
       a {
         font-family: 'Nunito-Regular';
         font-weight: bold;
-        color: #847F7B;
+        color: #847f7b;
         font-size: 1.7rem;
+
         &:hover {
-          color: #FA7C37;
+          color: #fa7c37;
         }
       }
     }
+
     &-right {
       width: 30%;
       justify-content: flex-end;
+
       span {
         font-family: 'Nunito-Regular';
         font-weight: bold;
         font-size: 2rem;
-        color: #847F7B;
+        color: #847f7b;
         margin-right: 1.8rem;
       }
+
       .btn {
         font-family: 'Nunito-Regular';
         font-weight: bold;
         margin-right: 1.5rem;
         font-size: 1.5rem;
-        background-color: #FA7C37;
+        background-color: #fa7c37;
         color: white;
+
         &:hover {
           background-color: #847F7B;
         }
       }
+
       img {
         width: 3rem;
         margin-left: 1.5rem;
@@ -134,18 +147,22 @@ a:-webkit-any-link {
 .footer {
   margin: 0 auto;
   height: 6rem;
-  background-color: #4E443E;
+  background-color: #4e443e;
+
   &-container {
     margin: 0 auto;
     height: 6rem;
     width: 98%;
+
     &-left {
       padding: 2rem;
       width: 30%;
+
       img {
         width: 5rem;
         margin-right: 1.2rem;
       }
+
       h2 {
         position: relative;
         bottom: 0.5rem;
@@ -154,19 +171,22 @@ a:-webkit-any-link {
         font-weight: bolder;
         color: white;
       }
+
       p {
         position: relative;
         top: 0.9rem;
         left: 0.5rem;
         width: 1.3rem;
         height: 1.3rem;
-        background-color: #F76108;
+        background-color: #f76108;
         border-radius: 50%;
       }
     }
+
     &-middle {
       width: 40%;
       justify-content: center;
+
       &-item3,
       &-item2,
       &-item1 {
@@ -174,18 +194,22 @@ a:-webkit-any-link {
         font-size: 1.5rem;
         font-weight: bolder;
       }
+
       &-item2,
       &-item1 {
-        color: #F76108;
+        color: #f76108;
         margin-right: 1.5rem;
       }
+
       &-item3 {
         color: white;
       }
     }
+
     &-right {
       width: 30%;
       justify-content: flex-end;
+
       &-item1 {
         font-family: 'Nunito-Regular';
         font-size: 1.5rem;
@@ -193,6 +217,7 @@ a:-webkit-any-link {
         color: white;
         margin-right: 1.2rem;
       }
+      
       img {
         width: 2.2rem;
         margin-right: 0.8rem;

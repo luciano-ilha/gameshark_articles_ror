@@ -7,16 +7,21 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   height: 55rem;
+
   &-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     &-img {
       width: 100%;
       background-position: center;
       background-size: cover;
     }
+
     &-content {
+
       h3 {
+
         a {
           font-family: 'Nunito-Regular';
           font-weight: bold;
@@ -28,8 +33,10 @@
           color: black
         }
       }
+
       p {
         line-height: 1.8rem;
+        
         a {
           font-family: 'Nunito-Regular';
           font-weight: bold;

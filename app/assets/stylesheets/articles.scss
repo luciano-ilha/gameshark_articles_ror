@@ -6,6 +6,7 @@
 .main-article {
   height: 55rem;
   background-size: cover;
+
   p,
   h1 {
     font-family: 'Nunito-Regular';
@@ -18,17 +19,21 @@
     padding: 0.8rem;
     border-radius: 1rem;
   }
+
   h1 {
     a {
-      color: #FA6000;
+      color: #fa6000;
       font-size: 3rem;
+
       &:hover {
         color: #ff9d60;
       }
     }
   }
+
   p {
     width: 93%;
+
     a {
       color: white;
       font-size: 1.7rem;
@@ -41,16 +46,19 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   height: 28rem;
+
   &-item {
     background-position: center;
     background-size: cover;
+
     h2 {
+
       a {
         font-family: 'Nunito-Regular';
         font-weight: bold;
         left: 1.5rem;
         text-decoration: underline;
-        text-decoration-color: #FA6000;
+        text-decoration-color: #fa6000;
         font-size: 1.9rem;
         position: relative;
         display: inline-block;
@@ -60,6 +68,7 @@
         color: white;
       }
     }
+
     h3 {
       width: 90%;
       line-height: 1.8rem;
@@ -88,6 +97,7 @@
   align-items: center;
   height: 55rem;
   background-size: cover;
+
   h2 {
     align-self: flex-start;
     position: relative;
@@ -98,13 +108,14 @@
     padding: 0.8rem;
     border-radius: 1rem;
     text-decoration: underline;
-    text-decoration-color: #FA6000;
+    text-decoration-color: #fa6000;
   }
+
   h1 {
     font-family: 'Nunito-Regular';
     font-size: 3.5rem;
     font-weight: bold;
-    color: #FA6000;
+    color: #fa6000;
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 0.8rem;
@@ -116,21 +127,24 @@
   margin-top: 3rem;
   margin-bottom: 5rem;
   width: 60%;
+
   p {
     font-family: 'Nunito-Regular';
     font-size: 1.7rem;
     font-weight: bold;
     margin-bottom: 4rem;
   }
+
   .btn {
     font-family: 'Nunito-Regular';
     font-weight: bold;
     margin-right: 1.5rem;
     font-size: 1.5rem;
-    background-color: #FA7C37;
+    background-color: #fa7c37;
     color: white;
+
     &:hover {
-      background-color: #847F7B;
+      background-color: #847f7b;
     }
   }
 }
@@ -142,16 +156,19 @@
   justify-content: center;
   align-items: center;
   height: 60rem;
+
   h1,
   span {
   display: block;
   font-family: 'Nunito-Regular';
   font-weight: bolder;
   }
+
   h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
   }
+  
   span {
     font-size: 1.5rem;
     margin-bottom: 1rem;
