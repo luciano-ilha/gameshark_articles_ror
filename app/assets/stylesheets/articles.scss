@@ -3,44 +3,6 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 // Index page
-.main-article {
-  height: 55rem;
-  background-size: cover;
-
-  p,
-  h1 {
-    font-family: 'Nunito-Regular';
-    font-weight: bold;
-    display: inline-block;
-    position: relative;
-    left: 5rem;
-    top: 35rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 0.8rem;
-    border-radius: 1rem;
-  }
-
-  h1 {
-    a {
-      color: #fa6000;
-      font-size: 3rem;
-
-      &:hover {
-        color: #ff9d60;
-      }
-    }
-  }
-
-  p {
-    width: 93%;
-
-    a {
-      color: white;
-      font-size: 1.7rem;
-    }
-  }
-}
-
 .cat-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -52,9 +14,8 @@
     background-size: cover;
 
     h2 {
-
       a {
-        font-family: 'Nunito-Regular';
+        font-family: 'Nunito-Regular', sans-serif;
         font-weight: bold;
         left: 1.5rem;
         text-decoration: underline;
@@ -73,7 +34,7 @@
       width: 90%;
       line-height: 1.8rem;
       a {
-        font-family: 'Nunito-Regular';
+        font-family: 'Nunito-Regular', sans-serif;
         font-weight: bold;
         left: 1.5rem;
         top: 13rem;
@@ -84,6 +45,44 @@
         padding: 0.8rem;
         border-radius: 1rem;
         color: white;
+      }
+    }
+  }
+}
+
+.main-article {
+  height: 55rem;
+  background-size: cover;
+
+  p,
+  h1 {
+    font-family: 'Nunito-Regular', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    left: 5rem;
+    top: 35rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.8rem;
+    border-radius: 1rem;
+  }
+
+  p {
+    width: 93%;
+
+    a {
+      color: white;
+      font-size: 1.7rem;
+    }
+  }
+
+  h1 {
+    a {
+      color: #fa6000;
+      font-size: 3rem;
+
+      &:hover {
+        color: #ff9d60;
       }
     }
   }
@@ -112,7 +111,7 @@
   }
 
   h1 {
-    font-family: 'Nunito-Regular';
+    font-family: 'Nunito-Regular', sans-serif;
     font-size: 3.5rem;
     font-weight: bold;
     color: #fa6000;
@@ -129,14 +128,14 @@
   width: 60%;
 
   p {
-    font-family: 'Nunito-Regular';
+    font-family: 'Nunito-Regular', sans-serif;
     font-size: 1.7rem;
     font-weight: bold;
     margin-bottom: 4rem;
   }
 
   .btn {
-    font-family: 'Nunito-Regular';
+    font-family: 'Nunito-Regular', sans-serif;
     font-weight: bold;
     margin-right: 1.5rem;
     font-size: 1.5rem;
@@ -160,7 +159,7 @@
   h1,
   span {
   display: block;
-  font-family: 'Nunito-Regular';
+  font-family: 'Nunito-Regular', sans-serif;
   font-weight: bolder;
   }
 
