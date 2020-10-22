@@ -1,22 +1,23 @@
-class UsersController < ApplicationController
+# frozen_string_literal: true
 
+class UsersController < ApplicationController
   def new
     @user = User.new
   end
-  
+
   def create
     @user = User.create(user_params)
 
     if @user.save
-      flash[:success] = "User successfully created"
+      flash[:success] = 'User successfully created'
       session[:user_id] = @user.id
       redirect_to welcome_path
     else
-      flash[:error] = "Something went wrong"
+      flash[:error] = 'Something went wrong'
       render root_path
     end
   end
-  
+
   def destroy
     @user = User.find(current_user.id)
 
@@ -28,7 +29,7 @@ class UsersController < ApplicationController
       redirect_to welcome_path
     end
   end
-  
+
   private
 
   def user_params

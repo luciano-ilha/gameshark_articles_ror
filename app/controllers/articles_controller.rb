@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all.order(:cached_votes_score => :desc)
+    @articles = Article.all.order(cached_votes_score: :desc)
     @upd_art = Article.all.order(:created_at)
     @art_arr1 = []
     @art_arr2 = []
@@ -9,24 +11,12 @@ class ArticlesController < ApplicationController
     @art_arr5 = []
     @art_arr6 = []
     @upd_art.each do |a|
-      if a.category.priority == 1
-        @art_arr1 << a
-      end
-      if a.category.priority == 2
-        @art_arr2 << a
-      end
-      if a.category.priority == 3
-        @art_arr3 << a
-      end
-      if a.category.priority == 4
-        @art_arr4 << a
-      end
-      if a.category.priority == 5
-        @art_arr5 << a
-      end
-      if a.category.priority == 6
-        @art_arr6 << a
-      end
+      @art_arr1 << a if a.category.priority == 1
+      @art_arr2 << a if a.category.priority == 2
+      @art_arr3 << a if a.category.priority == 3
+      @art_arr4 << a if a.category.priority == 4
+      @art_arr5 << a if a.category.priority == 5
+      @art_arr6 << a if a.category.priority == 6
     end
   end
 
@@ -38,10 +28,10 @@ class ArticlesController < ApplicationController
     user = User.find(session[:user_id])
     @article = user.articles.new(article_params)
     if @article.save
-      flash[:success] = "Article successfully created"
+      flash[:success] = 'Article successfully created'
       redirect_to article_path(@article.id)
     else
-      flash[:error] = "Something went wrong"
+      flash[:error] = 'Something went wrong'
       render root_path
     end
   end
@@ -49,22 +39,22 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
   end
-  
+
   def edit
     @article = Article.find(params[:id])
   end
 
   def update
     @article = Article.find(params[:id])
-      if @article.update_attributes(article_params)
-        flash[:success] = "Article was successfully updated"
-        redirect_to article_path(@article.id)
-      else
-        flash[:error] = "Something went wrong"
-        render article_path
-      end
+    if @article.update_attributes(article_params)
+      flash[:success] = 'Article was successfully updated'
+      redirect_to article_path(@article.id)
+    else
+      flash[:error] = 'Something went wrong'
+      render article_path
+    end
   end
-  
+
   def destroy
     @article = Article.find(params[:id])
     if @article.destroy
