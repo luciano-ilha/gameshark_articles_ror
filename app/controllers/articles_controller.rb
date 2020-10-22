@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all.order(cached_votes_score: :desc)
@@ -59,11 +57,10 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     if @article.destroy
       flash[:success] = 'Article was successfully deleted.'
-      redirect_to root_path
     else
       flash[:error] = 'Something went wrong'
-      redirect_to root_path
     end
+    redirect_to root_path
   end
 
   def upvote
