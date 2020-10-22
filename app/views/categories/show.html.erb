@@ -1,30 +1,38 @@
 <div class="category-container">
   <div class="category-container-item">
+    <% if @category.articles.first != nil %>
     <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(@category.articles.first.image) %>)"></div>
     <div class="category-container-item-content">
       <h3><%= link_to "#{@category.articles.first.title}", article_path(@category.articles.first.id) %></h3>
       <p><%= link_to "#{@category.articles.first.text.truncate(450, separator: ' ')}", article_path(@category.articles.first.id) %></p>
     </div>
+    <% end %>
   </div>
   <div class="category-container-item">
+    <% if @category.articles.second != nil %>
     <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(@category.articles.second.image) %>)"></div>
     <div class="category-container-item-content">
       <h3><%= link_to "#{@category.articles.second.title}", article_path(@category.articles.second.id) %></h3>
       <p><%= link_to "#{@category.articles.second.text.truncate(450, separator: ' ')}", article_path(@category.articles.second.id) %></p>
     </div>
+    <% end %>
   </div>
   <div class="category-container-item">
+    <% if @category.articles.third != nil %>
     <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(@category.articles.third.image) %>)"></div>
     <div class="category-container-item-content">
       <h3><%= link_to "#{@category.articles.third.title}", article_path(@category.articles.third.id) %></h3>
       <p><%= link_to "#{@category.articles.third.text.truncate(450, separator: ' ')}", article_path(@category.articles.third.id) %></p>
     </div>
+    <% end %>
   </div>
   <div class="category-container-item">
+    <% if @category.articles.fourth != nil %>
     <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(@category.articles.fourth.image) %>)"></div>
     <div class="category-container-item-content">
       <h3><%= link_to "#{@category.articles.fourth.title}", article_path(@category.articles.fourth.id) %></h3>
       <p><%= link_to "#{@category.articles.fourth.text.truncate(450, separator: ' ')}", article_path(@category.articles.fourth.id) %></p>
     </div>
+    <% end %>
   </div>
 </div>
