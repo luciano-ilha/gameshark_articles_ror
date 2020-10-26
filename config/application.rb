@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Style/Documentation
+
 require_relative 'boot'
 
 require 'rails/all'
@@ -20,3 +22,4 @@ module GamesharkArticlesRor
     # the framework and any gems in your application.
   end
 end
+# rubocop:enable Style/Documentation

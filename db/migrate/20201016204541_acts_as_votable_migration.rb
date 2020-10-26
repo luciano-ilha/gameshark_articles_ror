@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Style/Documentation
+
 class ActsAsVotableMigration < ActiveRecord::Migration[4.2]
   def self.up
     create_table :votes do |t|
@@ -21,3 +23,4 @@ class ActsAsVotableMigration < ActiveRecord::Migration[4.2]
     drop_table :votes
   end
 end
+# rubocop:enable Style/Documentation

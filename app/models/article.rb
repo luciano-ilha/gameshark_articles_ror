@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+# rubocop:disable Style/Documentation
+
 class Article < ApplicationRecord
   acts_as_votable
   validates :title, :text, :category, presence: true
@@ -6,3 +10,4 @@ class Article < ApplicationRecord
   has_many :votes
   belongs_to :category, class_name: 'Category', foreign_key: 'category_id'
 end
+# rubocop:enable Style/Documentation

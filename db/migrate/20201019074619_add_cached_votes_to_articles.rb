@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Style/Documentation
+
 class AddCachedVotesToArticles < ActiveRecord::Migration[5.2]
   def change
     change_table :articles do |t|
@@ -16,3 +18,4 @@ class AddCachedVotesToArticles < ActiveRecord::Migration[5.2]
     # Post.find_each(&:update_cached_votes)
   end
 end
+# rubocop:enable Style/Documentation

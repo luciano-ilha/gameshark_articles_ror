@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+# rubocop:disable Style/Documentation
+
 class UsersController < ApplicationController
   def new
     @user = User.new
@@ -34,3 +38,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:username, :password)
   end
 end
+# rubocop:enable Style/Documentation

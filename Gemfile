@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -48,16 +50,16 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'awesome_print', '~> 1.8'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'capybara', '~> 3.33'
-  gem 'factory_bot_rails', '~> 6.1'
-  gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
   gem 'database_cleaner-active_record', '~> 1.8'
-  gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
-  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
+  gem 'factory_bot_rails', '~> 6.1'
   gem 'pry', '~> 0.13.1'
   gem 'pry-rails', '~> 0.3.9'
-  gem 'awesome_print', '~> 1.8'
+  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
+  gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
+  gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
 end
 
 group :development do

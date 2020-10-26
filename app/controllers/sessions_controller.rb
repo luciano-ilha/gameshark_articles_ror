@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
+# rubocop:disable Style/Documentation
+
 class SessionsController < ApplicationController
-  def new
-  end
+  def new; end
 
   def create
     @user = User.find_by(username: params[:username])
@@ -20,6 +23,6 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
-  def login
-  end
+  def login; end
 end
+# rubocop:enable Style/Documentation
