@@ -1,7 +1,3 @@
-# frozen_string_literal: true
-
-# rubocop:disable Metrics/BlockLength
-
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
@@ -38,4 +34,3 @@ RSpec.describe User, type: :model do
     it { expect(@user).to respond_to(:password) }
   end
 end
-# rubocop:enable Metrics/BlockLength

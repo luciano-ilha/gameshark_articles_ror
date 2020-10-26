@@ -1,7 +1,3 @@
-# frozen_string_literal: true
-
-# rubocop:disable Style/Documentation
-
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all.order(cached_votes_score: :desc)
@@ -72,4 +68,3 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :text, :image, :category_id)
   end
 end
-# rubocop:enable Style/Documentation

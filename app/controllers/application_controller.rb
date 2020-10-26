@@ -1,12 +1,4 @@
-# frozen_string_literal: true
-
-# rubocop:disable Style/Documentation
-
-# rubocop:disable Metrics/MethodLength
-
 # rubocop:disable Metrics/CyclomaticComplexity
-
-# rubocop:disable Metrics/AbcSize
 
 class ApplicationController < ActionController::Base
   helper_method :current_user
@@ -38,10 +30,5 @@ class ApplicationController < ActionController::Base
     end
   end
 end
-# rubocop:enable Style/Documentation
-
-# rubocop:enable Metrics/MethodLength
 
 # rubocop:enable Metrics/CyclomaticComplexity
-
-# rubocop:enable Metrics/AbcSize

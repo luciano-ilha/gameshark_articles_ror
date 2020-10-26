@@ -1,7 +1,3 @@
-# frozen_string_literal: true
-
-# rubocop:disable Style/Documentation
-
 class SessionsController < ApplicationController
   def new; end
 
@@ -25,4 +21,3 @@ class SessionsController < ApplicationController
 
   def login; end
 end
-# rubocop:enable Style/Documentation
