@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:success] = 'User successfully created'
       session[:user_id] = @user.id
-      redirect_to welcome_path
+      redirect_to new_article_path
     else
       flash[:error] = 'Something went wrong'
       render root_path
