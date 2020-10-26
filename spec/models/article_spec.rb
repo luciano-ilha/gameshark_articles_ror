@@ -1,8 +1,21 @@
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
-  describe 'validations' do
-    let(:article) { FactoryBot.build(:article) }
+  context 'should respond to all given fields' do
+    it { should respond_to(:title) }
+    it { should respond_to(:text) }
+    it { should respond_to(:author) }
+    it { should respond_to(:category) }
+  end
+
+  context 'Validates presence of all given fields' do
+    it { is_expected.to validate_presence_of(:title) }
+    it { is_expected.to validate_presence_of(:text) }
+    it { is_expected.to validate_presence_of(:category) }
+  end
+
+  context 'validations' do
+    let(:article) { FactoryBot.create(:article) }
     it 'should have a title' do
       article.title = nil
       expect(article).to_not be_valid
@@ -24,11 +37,12 @@ RSpec.describe Article, type: :model do
     end
 
     it 'should have a title, text, category and author' do
-      article.title = 'Some Title'
-      article.text = 'Some text'
-      article.category_id = '1'
-      article.user_id = '1'
       expect(article).to be_valid
     end
+  end
+
+  context 'Check articles association belong_to' do
+    it { is_expected.to belong_to(:author) }
+    it { is_expected.to belong_to(:category) }
   end
 end

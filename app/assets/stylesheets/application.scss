@@ -24,10 +24,12 @@
   box-sizing: border-box;
 }
 
+/* stylelint-disable */
 @font-face {
   font-family: 'Nunito-Regular';
   src: url(font-path('Nunito-Regular.ttf')) format('truetype');
 }
+/* stylelint-enable */
 
 a:-webkit-any-link {
   text-decoration: none;

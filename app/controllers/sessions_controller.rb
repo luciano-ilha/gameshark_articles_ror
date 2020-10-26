@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-  def new; end
+  def new
+  end
 
   def create
     @user = User.find_by(username: params[:username])
@@ -16,8 +17,9 @@ class SessionsController < ApplicationController
   def destroy
     session.delete(:user_id)
     @current_user = nil
-    redirect_to root_url
+    redirect_to root_path
   end
 
-  def login; end
+  def login
+  end
 end

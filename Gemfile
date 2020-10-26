@@ -13,8 +13,6 @@ gem 'sass-rails', '~> 6.0'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# Use Hirb to customise console view
-gem 'hirb', '~> 0.7.3'
 # Postgres gem
 gem 'pg', '~> 1.2', '>= 1.2.3'
 # Bcrypt gem
@@ -53,7 +51,13 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'capybara', '~> 3.33'
   gem 'factory_bot_rails', '~> 6.1'
+  gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
+  gem 'database_cleaner-active_record', '~> 1.8'
   gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
+  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
+  gem 'pry', '~> 0.13.1'
+  gem 'pry-rails', '~> 0.3.9'
+  gem 'awesome_print', '~> 1.8'
 end
 
 group :development do
@@ -66,7 +70,6 @@ group :development do
 end
 
 group :test do
-  gem 'database_cleaner', '~> 1.8', '>= 1.8.5'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
