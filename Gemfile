@@ -57,6 +57,7 @@ group :development, :test do
   gem 'capybara', '~> 3.33'
   gem 'database_cleaner-active_record', '~> 1.8'
   gem 'factory_bot_rails', '~> 6.1'
+  gem 'pg', '~> 1.2', '>= 1.2.3'
   gem 'pry', '~> 0.13.1'
   gem 'pry-rails', '~> 0.3.9'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
