@@ -1,8 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all.order(cached_votes_score: :desc)
-    @upd_art = Article.all.order(:created_at)
-    priority_check
+    category_check
   end
 
   def new
