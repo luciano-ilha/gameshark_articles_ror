@@ -1,30 +1,32 @@
-<div class="main-article" style="background-image: url(<%= rails_blob_url(@articles.first.image) %>)">
-  <h1><%= link_to "#{@articles.first.title}", article_path(@articles.first.id) %></h1>
-  <p><%= link_to "#{@articles.first.text.truncate(250, separator: ' ')}", article_path(@articles.first.id) %></p>
-</div>
-<div class="cat-row">
-  <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat1.first.image) %>)">
-    <h2><%= link_to "#{@art_cat1.first.category.name}", article_path(@art_cat1.first.id) %></h2>
-    <h3><%= link_to "#{@art_cat1.first.title}", article_path(@art_cat1.first.id) %></h3>
+<% if @articles.first != nil %>
+  <div class="main-article" style="background-image: url(<%= rails_blob_url(@articles.first.image) %>)">
+    <h1><%= link_to "#{@articles.first.title}", article_path(@articles.first.id) %></h1>
+    <p><%= link_to "#{@articles.first.text.truncate(250, separator: ' ')}", article_path(@articles.first.id) %></p>
   </div>
-  <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat2.first.image) %>)">
-    <h2><%= link_to "#{@art_cat2.first.category.name}", article_path(@art_cat2.first.id) %></h2>
-    <h3><%= link_to "#{@art_cat2.first.title}", article_path(@art_cat2.first.id) %></h3>
+  <div class="cat-row">
+    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat1.image) %>)">
+      <h2><%= link_to "#{@art_cat1.category.name}", article_path(@art_cat1.id) %></h2>
+      <h3><%= link_to "#{@art_cat1.title}", article_path(@art_cat1.id) %></h3>
+    </div>
+    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat2.image) %>)">
+      <h2><%= link_to "#{@art_cat2.category.name}", article_path(@art_cat2.id) %></h2>
+      <h3><%= link_to "#{@art_cat2.title}", article_path(@art_cat2.id) %></h3>
+    </div>
+    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat3.image) %>)">
+      <h2><%= link_to "#{@art_cat3.category.name}", article_path(@art_cat3.id) %></h2>
+      <h3><%= link_to "#{@art_cat3.title}", article_path(@art_cat3.id) %></h3>
+    </div>
+    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat4.image) %>)">
+      <h2><%= link_to "#{@art_cat4.category.name}", article_path(@art_cat4.id) %></h2>
+      <h3><%= link_to "#{@art_cat4.title}", article_path(@art_cat4.id) %></h3>
+    </div>
+    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat5.image) %>)">
+      <h2><%= link_to "#{@art_cat5.category.name}", article_path(@art_cat5.id) %></h2>
+      <h3><%= link_to "#{@art_cat5.title}", article_path(@art_cat5.id) %></h3>
+    </div>
+    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat6.image) %>)">
+      <h2><%= link_to "#{@art_cat6.category.name}", article_path(@art_cat6.id) %></h2>
+      <h3><%= link_to "#{@art_cat6.title}", article_path(@art_cat6.id) %></h3>
+    </div>
   </div>
-  <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat3.first.image) %>)">
-    <h2><%= link_to "#{@art_cat3.first.category.name}", article_path(@art_cat3.first.id) %></h2>
-    <h3><%= link_to "#{@art_cat3.first.title}", article_path(@art_cat3.first.id) %></h3>
-  </div>
-  <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat4.first.image) %>)">
-    <h2><%= link_to "#{@art_cat4.first.category.name}", article_path(@art_cat4.first.id) %></h2>
-    <h3><%= link_to "#{@art_cat4.first.title}", article_path(@art_cat4.first.id) %></h3>
-  </div>
-  <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat5.first.image) %>)">
-    <h2><%= link_to "#{@art_cat5.first.category.name}", article_path(@art_cat5.first.id) %></h2>
-    <h3><%= link_to "#{@art_cat5.first.title}", article_path(@art_cat5.first.id) %></h3>
-  </div>
-  <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat6.first.image) %>)">
-    <h2><%= link_to "#{@art_cat6.first.category.name}", article_path(@art_cat6.first.id) %></h2>
-    <h3><%= link_to "#{@art_cat6.first.title}", article_path(@art_cat6.first.id) %></h3>
-  </div>
-</div>
+<% end %>

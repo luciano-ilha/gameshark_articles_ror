@@ -14,12 +14,12 @@ class ApplicationController < ActionController::Base
   end
 
   def category_check
-    @art_cat1 = Article.includes(:category).where('articles.category_id = ?', 1).order(created_at: :desc)
-    @art_cat2 = Article.includes(:category).where('articles.category_id = ?', 2).order(created_at: :desc)
-    @art_cat3 = Article.includes(:category).where('articles.category_id = ?', 3).order(created_at: :desc)
-    @art_cat4 = Article.includes(:category).where('articles.category_id = ?', 4).order(created_at: :desc)
-    @art_cat5 = Article.includes(:category).where('articles.category_id = ?', 5).order(created_at: :desc)
-    @art_cat6 = Article.includes(:category).where('articles.category_id = ?', 6).order(created_at: :desc)
+    @art_cat1 = Article.includes(:category).where('articles.category_id = ?', 1).order(created_at: :desc).first
+    @art_cat2 = Article.includes(:category).where('articles.category_id = ?', 2).order(created_at: :desc).first
+    @art_cat3 = Article.includes(:category).where('articles.category_id = ?', 3).order(created_at: :desc).first
+    @art_cat4 = Article.includes(:category).where('articles.category_id = ?', 4).order(created_at: :desc).first
+    @art_cat5 = Article.includes(:category).where('articles.category_id = ?', 5).order(created_at: :desc).first
+    @art_cat6 = Article.includes(:category).where('articles.category_id = ?', 6).order(created_at: :desc).first
   end
   # def priority_check
   #   @art_arr1 = []
