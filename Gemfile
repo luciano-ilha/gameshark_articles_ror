@@ -23,6 +23,8 @@ gem 'activestorage'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 # Acts_as_votable gem
 gem 'acts_as_votable', '~> 0.12.1'
+#Rubocop
+gem 'rubocop', '~> 1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
