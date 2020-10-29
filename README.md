@@ -1,6 +1,8 @@
 # Gameshark Articles
 It's a games article desktop app that allows users to post their articles and other users to like and make a comment about it.
 
+![Screenshot](app/assets/images/project-screenshot.png)
+
 ## Built With
 
 - Ruby v2.7.0
@@ -11,8 +13,7 @@ It's a games article desktop app that allows users to post their articles and ot
 
 ## Live Demo
 
-[Gameshark-articles-ror]()
-
+[Gameshark-articles-ror](https://gameshark-articles-ror.herokuapp.com/)
 
 ## Getting Started
 
