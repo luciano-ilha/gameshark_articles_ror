@@ -155,22 +155,41 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 60rem;
+  height: 85rem;
+  background-image: url(gamer.jpg);
+  background-position: center;
 
-  h1,
-  span {
-    display: block;
-    font-family: 'Nunito-Regular', sans-serif;
-    font-weight: bolder;
-  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(249, 134, 67, 0.5);
+    padding: 0 3rem 2rem;
 
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
+    h1,
+    span {
+      display: block;
+      font-family: 'Nunito-Regular', sans-serif;
+      font-weight: bolder;
+      color: white;
+    }
 
-  span {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+      align-self: center;
+      
+    }
+
+    span {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 0.8rem;
+      padding-left: 0.8rem
+    }
+
+    span:last-child {
+      color: black;
+    }
   }
 }

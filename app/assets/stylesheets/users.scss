@@ -7,22 +7,38 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 46rem;
+  height: 70rem;
+  background-image: url(elite.jpg);
+  background-position: center;
+  background-size: cover;
 
-  h1,
-  span {
-    display: block;
-    font-family: 'Nunito-Regular', sans-serif;
-    font-weight: bolder;
-  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1.3rem 3rem 3rem;
 
-  h1 {
-    font-size: 4rem;
-    margin-bottom: 4rem;
-  }
+    &-field {
+      padding-bottom: 2.8rem;
+    }
 
-  span {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    h1,
+    span {
+      display: block;
+      font-family: 'Nunito-Regular', sans-serif;
+      font-weight: bolder;
+    }
+
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 4rem;
+      align-self: center;
+      
+    }
+
+    span {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
   }
 }

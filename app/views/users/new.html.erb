@@ -1,10 +1,12 @@
 <div class="signup-container">
-  <h1>Sign Up</h1>
-  <%= form_with model:@user, method: 'post' do |f| %>
-    <span><%= label(:user, :username) %></span>
-    <span><%= f.text_field :username %></span>
-    <span><%= label(:user, :password) %></span>
-    <span><%= f.password_field :password %></span>
-    <span><%= f.submit "Create" %></span>
-  <% end %>
+  <div class="signup-container-form">
+    <h1>Sign Up</h1>
+    <%= form_with model:@user, method: 'post' do |f| %>
+      <span><%= label(:user, :username) %></span>
+      <span class="signup-container-form-field"><%= f.text_field :username %></span>
+      <span><%= label(:user, :password) %></span>
+      <span class="signup-container-form-field"><%= f.password_field :password %></span>
+      <span><%= f.submit "Create" %></span>
+    <% end %>
+  </div>
 </div>
