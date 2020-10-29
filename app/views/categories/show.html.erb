@@ -1,37 +1,37 @@
 <div class="category-container">
   <div class="category-container-item">
-    <% if cat_order(@category).first != nil %>
-    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(cat_order(@category).first.image) %>)"></div>
+    <% if first_article != nil %>
+    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(first_image) %>)"></div>
     <div class="category-container-item-content">
-      <h3><%= link_to "#{cat_order(@category).first.title}", article_path(cat_order(@category).first.id) %></h3>
-      <p><%= link_to "#{cat_order(@category).first.text.truncate(450, separator: ' ')}", article_path(cat_order(@category).first.id) %></p>
+      <h3><%= link_to "#{first_title}", article_path(first_id) %></h3>
+      <p><%= link_to "#{first_text}", article_path(first_id) %></p>
     </div>
     <% end %>
   </div>
   <div class="category-container-item">
-    <% if cat_order(@category).second != nil %>
-    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(cat_order(@category).second.image) %>)"></div>
+    <% if second_article != nil %>
+    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(second_image) %>)"></div>
     <div class="category-container-item-content">
-      <h3><%= link_to "#{cat_order(@category).second.title}", article_path(cat_order(@category).second.id) %></h3>
-      <p><%= link_to "#{cat_order(@category).second.text.truncate(450, separator: ' ')}", article_path(cat_order(@category).second.id) %></p>
+      <h3><%= link_to "#{second_title}", article_path(second_id) %></h3>
+      <p><%= link_to "#{second_text}", article_path(second_id) %></p>
     </div>
     <% end %>
   </div>
   <div class="category-container-item">
-    <% if cat_order(@category).third != nil %>
-    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(cat_order(@category).third.image) %>)"></div>
+    <% if third_article != nil %>
+    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(third_image) %>)"></div>
     <div class="category-container-item-content">
-      <h3><%= link_to "#{cat_order(@category).third.title}", article_path(cat_order(@category).third.id) %></h3>
-      <p><%= link_to "#{cat_order(@category).third.text.truncate(450, separator: ' ')}", article_path(cat_order(@category).third.id) %></p>
+      <h3><%= link_to "#{third_title}", article_path(third_id) %></h3>
+      <p><%= link_to "#{third_text}", article_path(third_id) %></p>
     </div>
     <% end %>
   </div>
   <div class="category-container-item">
-    <% if cat_order(@category).fourth != nil %>
-    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(cat_order(@category).fourth.image) %>)"></div>
+    <% if fourth_article != nil %>
+    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(fourth_image) %>)"></div>
     <div class="category-container-item-content">
-      <h3><%= link_to "#{cat_order(@category).fourth.title}", article_path(cat_order(@category).fourth.id) %></h3>
-      <p><%= link_to "#{cat_order(@category).fourth.text.truncate(450, separator: ' ')}", article_path(cat_order(@category).fourth.id) %></p>
+      <h3><%= link_to "#{fourth_title}", article_path(fourth_id) %></h3>
+      <p><%= link_to "#{fourth_text}", article_path(fourth_id) %></p>
     </div>
     <% end %>
   </div>
