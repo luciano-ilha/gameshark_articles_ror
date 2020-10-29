@@ -1,5 +1,6 @@
 # Gameshark Articles
-It's a games article desktop app that allows users to post their articles and other users to like and make a comment about it.
+
+It's a games article desktop app that allows users to post their articles in several categories like What's New, Action, Sports, FPS, RPG e Terror. Another user can read an article and upvate or downvote any created article. These articles are ordered to show at the front banner the article with the best score from this votes in total. In the categories section, the user can see the articles for that particular category ordered by the last one created, this last one is the one displayed in the category banner at "home" page.
 
 ![Screenshot](app/assets/images/project-screenshot.png)
 
@@ -15,40 +16,90 @@ It's a games article desktop app that allows users to post their articles and ot
 
 [Gameshark-articles-ror](https://gameshark-articles-ror.herokuapp.com/)
 
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-- Fork this repository on github
-- Change directory into the repository
-- Install all gems
-- Create Database
-- Run migration
-
-
 
 ### Prerequisites
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
+- Ruby: 2.6.3
+- Rails: 5.2.3
+- Postgres: >=9.5
+
+## Getting Started
+
+- First get a local copy of the project by forking it or just clone it typing this at your terminal inside your favorite folder:
+```
+$ git clone git@github.com:luciano-ilha/gameshark_articles_ror.git
+```
+
+- CD into the repository
 
 ### Setup
 
-Instal gems with:
+Install gems with:
 
 ```
 bundle install
 ```
-
-Setup database with:
+- Install postgress in your machine and configure "database.yml" file properly. Example:
 
 ```
-  make sure to install pg gem with it's proper configuration file
-  config database.yml file properly with the same informations from postgres database
-  rails db:create
-  rails db:migrate
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  encoding: unicode
+  database: gameshark_articles_ror
+  username: lucianoilhacarbonell
+  password: dev12345
+  host: localhost
+
+development:
+  <<: *default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  encoding: utf8
+  database: gameshark_articles_ror
+  username: lucianoilhacarbonell
+  password: dev12345
+  host: localhost
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  encoding: utf8
+  database: gameshark_articles_ror
+  username: lucianoilhacarbonell
+  password: dev12345
+  host: localhost
+
+production:
+  <<: *default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  encoding: utf8
+  database: <%= ENV['DATABASE_URL'] %>
+  username: lucianoilhacarbonell
+  password: dev12345
+  host: localhost
 ```
-### Test 
+- Run "db:create":
+```
+rails db:create
+```
+- Then migrate with:
+```
+rails db:migrate
+```  
+  
+### Test
+
+- Run rails spec command:
  ```
     rails spec
  ```
@@ -65,7 +116,7 @@ To make sure the linters' checks using Github Actions works properly, you should
 
 ### Usage
 
-Start server with:
+- Start server with:
 
 ```
     rails server
@@ -73,13 +124,6 @@ Start server with:
 
 Open `http://localhost:3000/` in your browser.
 
-### Run tests
-
-```
-    rpsec --format documentation
-```
-
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
 
 ### Deployment
 
@@ -106,17 +150,9 @@ Give a ⭐️ if you like this project!
 ## :thumbsup: Acknowledgements
 
 - Microverse  
-- ThOdinProject 
+- ThOdinProject
 
-## MIT Licence <a name = "licence"></a>  :registered:
+## Credits to
 
-MIT License
-
-Copyright (c) 2020 Haroon Abdulrazaq
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so.
+1 . Nelson Sakwa at Behance
+[link](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
