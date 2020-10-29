@@ -3,83 +3,83 @@ module CategoriesHelper
     category.articles.order(created_at: :desc)
   end
 
-  def first_article
+  def cat_first_article
     cat_order(@category).first
   end
 
-  def first_image
+  def cat_first_image
     cat_order(@category).first.image
   end
 
-  def first_title
+  def cat_first_title
     cat_order(@category).first.title
   end
 
-  def first_id
+  def cat_first_id
     cat_order(@category).first.id
   end
 
-  def first_text
+  def cat_first_text
     cat_order(@category).first.text.truncate(450, separator: ' ')
   end
 
-  def second_article
+  def cat_second_article
     cat_order(@category).second
   end
 
-  def second_image
+  def cat_second_image
     cat_order(@category).second.image
   end
 
-  def second_title
+  def cat_second_title
     cat_order(@category).second.title
   end
 
-  def second_id
+  def cat_second_id
     cat_order(@category).second.id
   end
 
-  def second_text
+  def cat_second_text
     cat_order(@category).second.text.truncate(450, separator: ' ')
   end
 
-  def third_article
+  def cat_third_article
     cat_order(@category).third
   end
 
-  def third_image
+  def cat_third_image
     cat_order(@category).third.image
   end
 
-  def third_title
+  def cat_third_title
     cat_order(@category).third.title
   end
 
-  def third_id
+  def cat_third_id
     cat_order(@category).third.id
   end
 
-  def third_text
+  def cat_third_text
     cat_order(@category).third.text.truncate(450, separator: ' ')
   end
 
-  def fourth_article
+  def cat_fourth_article
     cat_order(@category).fourth
   end
 
-  def fourth_image
+  def cat_fourth_image
     cat_order(@category).fourth.image
   end
 
-  def fourth_title
+  def cat_fourth_title
     cat_order(@category).fourth.title
   end
 
-  def fourth_id
+  def cat_fourth_id
     cat_order(@category).fourth.id
   end
 
-  def fourth_text
+  def cat_fourth_text
     cat_order(@category).fourth.text.truncate(450, separator: ' ')
   end
 end

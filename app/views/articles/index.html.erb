@@ -1,32 +1,32 @@
 <% if @articles.first != nil %>
-  <div class="main-article" style="background-image: url(<%= rails_blob_url(@articles.first.image) %>)">
-    <h1><%= link_to "#{@articles.first.title}", article_path(@articles.first.id) %></h1>
-    <p><%= link_to "#{@articles.first.text.truncate(250, separator: ' ')}", article_path(@articles.first.id) %></p>
+  <div class="main-article" style="background-image: url(<%= rails_blob_url(art_main_img) %>)">
+    <h1><%= link_to "#{art_main_title}", article_path(art_main_id) %></h1>
+    <p><%= link_to "#{art_main_text}", article_path(art_main_id) %></p>
   </div>
   <div class="cat-row">
-    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat1.image) %>)">
-      <h2><%= link_to "#{@art_cat1.category.name}", article_path(@art_cat1.id) %></h2>
-      <h3><%= link_to "#{@art_cat1.title}", article_path(@art_cat1.id) %></h3>
+    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(art_cat1_img) %>)">
+      <h2><%= link_to "#{art_cat1_name}", article_path(art_cat1_id) %></h2>
+      <h3><%= link_to "#{art_cat1_title}", article_path(art_cat1_id) %></h3>
     </div>
-    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat2.image) %>)">
-      <h2><%= link_to "#{@art_cat2.category.name}", article_path(@art_cat2.id) %></h2>
-      <h3><%= link_to "#{@art_cat2.title}", article_path(@art_cat2.id) %></h3>
+    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(art_cat2_img) %>)">
+      <h2><%= link_to "#{art_cat2_name}", article_path(art_cat2_id) %></h2>
+      <h3><%= link_to "#{art_cat2_title}", article_path(art_cat2_id) %></h3>
     </div>
-    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat3.image) %>)">
-      <h2><%= link_to "#{@art_cat3.category.name}", article_path(@art_cat3.id) %></h2>
-      <h3><%= link_to "#{@art_cat3.title}", article_path(@art_cat3.id) %></h3>
+    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(art_cat3_img) %>)">
+      <h2><%= link_to "#{art_cat3_name}", article_path(art_cat3_id) %></h2>
+      <h3><%= link_to "#{art_cat3_title}", article_path(art_cat3_id) %></h3>
     </div>
-    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat4.image) %>)">
-      <h2><%= link_to "#{@art_cat4.category.name}", article_path(@art_cat4.id) %></h2>
-      <h3><%= link_to "#{@art_cat4.title}", article_path(@art_cat4.id) %></h3>
+    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(art_cat4_img) %>)">
+      <h2><%= link_to "#{art_cat4_name}", article_path(art_cat4_id) %></h2>
+      <h3><%= link_to "#{art_cat4_title}", article_path(art_cat4_id) %></h3>
     </div>
-    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat5.image) %>)">
-      <h2><%= link_to "#{@art_cat5.category.name}", article_path(@art_cat5.id) %></h2>
-      <h3><%= link_to "#{@art_cat5.title}", article_path(@art_cat5.id) %></h3>
+    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(art_cat5_img) %>)">
+      <h2><%= link_to "#{art_cat5_name}", article_path(art_cat5_id) %></h2>
+      <h3><%= link_to "#{art_cat5_title}", article_path(art_cat5_id) %></h3>
     </div>
-    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(@art_cat6.image) %>)">
-      <h2><%= link_to "#{@art_cat6.category.name}", article_path(@art_cat6.id) %></h2>
-      <h3><%= link_to "#{@art_cat6.title}", article_path(@art_cat6.id) %></h3>
+    <div class="cat-row-item" style="background-image: url(<%= rails_blob_url(art_cat6_img) %>)">
+      <h2><%= link_to "#{art_cat6_name}", article_path(art_cat6_id) %></h2>
+      <h3><%= link_to "#{art_cat6_title}", article_path(art_cat6_id) %></h3>
     </div>
   </div>
 <% end %>

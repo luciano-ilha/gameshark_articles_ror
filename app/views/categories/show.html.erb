@@ -1,37 +1,37 @@
 <div class="category-container">
   <div class="category-container-item">
-    <% if first_article != nil %>
-    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(first_image) %>)"></div>
+    <% if cat_first_article != nil %>
+    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(cat_first_image) %>)"></div>
     <div class="category-container-item-content">
-      <h3><%= link_to "#{first_title}", article_path(first_id) %></h3>
-      <p><%= link_to "#{first_text}", article_path(first_id) %></p>
+      <h3><%= link_to "#{cat_first_title}", article_path(cat_first_id) %></h3>
+      <p><%= link_to "#{cat_first_text}", article_path(cat_first_id) %></p>
     </div>
     <% end %>
   </div>
   <div class="category-container-item">
-    <% if second_article != nil %>
-    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(second_image) %>)"></div>
+    <% if cat_second_article != nil %>
+    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(cat_second_image) %>)"></div>
     <div class="category-container-item-content">
-      <h3><%= link_to "#{second_title}", article_path(second_id) %></h3>
-      <p><%= link_to "#{second_text}", article_path(second_id) %></p>
+      <h3><%= link_to "#{cat_second_title}", article_path(cat_second_id) %></h3>
+      <p><%= link_to "#{cat_second_text}", article_path(cat_second_id) %></p>
     </div>
     <% end %>
   </div>
   <div class="category-container-item">
-    <% if third_article != nil %>
-    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(third_image) %>)"></div>
+    <% if cat_third_article != nil %>
+    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(cat_third_image) %>)"></div>
     <div class="category-container-item-content">
-      <h3><%= link_to "#{third_title}", article_path(third_id) %></h3>
-      <p><%= link_to "#{third_text}", article_path(third_id) %></p>
+      <h3><%= link_to "#{cat_third_title}", article_path(cat_third_id) %></h3>
+      <p><%= link_to "#{cat_third_text}", article_path(cat_third_id) %></p>
     </div>
     <% end %>
   </div>
   <div class="category-container-item">
-    <% if fourth_article != nil %>
-    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(fourth_image) %>)"></div>
+    <% if cat_fourth_article != nil %>
+    <div class="category-container-item-img" style="background-image: url(<%= rails_blob_url(cat_fourth_image) %>)"></div>
     <div class="category-container-item-content">
-      <h3><%= link_to "#{fourth_title}", article_path(fourth_id) %></h3>
-      <p><%= link_to "#{fourth_text}", article_path(fourth_id) %></p>
+      <h3><%= link_to "#{cat_fourth_title}", article_path(cat_fourth_id) %></h3>
+      <p><%= link_to "#{cat_fourth_text}", article_path(cat_fourth_id) %></p>
     </div>
     <% end %>
   </div>
