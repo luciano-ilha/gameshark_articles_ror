@@ -2,7 +2,7 @@
 
 It's a games article desktop app that allows users to post their articles in several categories like What's New, Action, Sports, FPS, RPG e Terror. Another user can read an article and upvate or downvote any created article. These articles are ordered to show at the front banner the article with the best score from this votes in total. In the categories section, the user can see the articles for that particular category ordered by the last one created, this last one is the one displayed in the category banner at "home" page.
 
-![Screenshot](app/assets/images/project-screenshot.png)
+![Screenshot](app/assets/images/project-screenshot1.png)
 
 ## Built With
 
@@ -37,9 +37,9 @@ $ git clone git@github.com:luciano-ilha/gameshark_articles_ror.git
 Install gems with:
 
 ```
-bundle install
+$ bundle install
 ```
-- Install postgress in your machine and configure "database.yml" file properly. Example:
+- Install postgress in your machine and configure `database.yml` file properly. Example:
 
 ```
 default: &default
@@ -90,18 +90,18 @@ production:
 ```
 - Run "db:create":
 ```
-rails db:create
+$ rails db:create
 ```
 - Then migrate with:
 ```
-rails db:migrate
+$ rails db:migrate
 ```  
   
 ### Test
 
 - Run rails spec command:
  ```
-    rails spec
+$ rails spec
  ```
 
 ### Github Actions
@@ -119,7 +119,7 @@ To make sure the linters' checks using Github Actions works properly, you should
 - Start server with:
 
 ```
-    rails server
+$ rails server
 ```
 
 Open `http://localhost:3000/` in your browser.
@@ -127,7 +127,7 @@ Open `http://localhost:3000/` in your browser.
 
 ### Deployment
 
- Heroku
+ - Heroku
 
 ## ✒️ Authors <a name = "author"></a>
 
