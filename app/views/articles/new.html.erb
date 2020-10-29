@@ -1,9 +1,6 @@
 <% if logged_in? %>
   <div class="new-art-container">
     <h1>New Article</h1>
-    <%= form_with model:@article, method: 'post' do |f| %>
-      <%= render 'form' %>
-      <span><%= f.submit "Create Article" %></span>
-    <% end %>
+    <%= render 'form' %>
   </div>
 <% end %>

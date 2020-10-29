@@ -1,8 +1,11 @@
-<span><%= label(:article, :title) %></span>
-<span><%= f.text_field :title, size: "50" %></span>
-<span><%= label(:article, :text) %></span>
-<span><%= f.text_area :text, size: "50x10" %></span>
-<span><%= label(:article, :category) %></span>
-<span><%= f.select :category_id, ["#{Category.find(1).id} - #{Category.find(1).name}", "#{Category.find(2).id} - #{Category.find(2).name}", "#{Category.find(3).id} - #{Category.find(3).name}", "#{Category.find(4).id} - #{Category.find(4).name}", "#{Category.find(5).id} - #{Category.find(5).name}", "#{Category.find(6).id} - #{Category.find(6).name}"], :prompt => 'Select One' %></span>
-<span><%= label(:article, :image) %></span>
-<span><%= f.file_field :image %></span>
+<%= form_with model:@article do |f| %>
+  <span><%= label(:article, :title) %></span>
+  <span><%= f.text_field :title, size: "50" %></span>
+  <span><%= label(:article, :text) %></span>
+  <span><%= f.text_area :text, size: "50x10" %></span>
+  <span><%= label(:article, :category) %></span>
+  <span><%= f.select :category_id, ["#{Category.find(1).id} - #{Category.find(1).name}", "#{Category.find(2).id} - #{Category.find(2).name}", "#{Category.find(3).id} - #{Category.find(3).name}", "#{Category.find(4).id} - #{Category.find(4).name}", "#{Category.find(5).id} - #{Category.find(5).name}", "#{Category.find(6).id} - #{Category.find(6).name}"], :prompt => 'Select One' %></span>
+  <span><%= label(:article, :image) %></span>
+  <span><%= f.file_field :image %></span>
+  <span><%= f.submit "Submit Article" %></span>
+<% end %>
