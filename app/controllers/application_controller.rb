@@ -19,20 +19,4 @@ class ApplicationController < ActionController::Base
     @art_cat5 = Article.includes(:category).where('articles.category_id = ?', 5).order(created_at: :desc).first
     @art_cat6 = Article.includes(:category).where('articles.category_id = ?', 6).order(created_at: :desc).first
   end
-  # def priority_check
-  #   @art_arr1 = []
-  #   @art_arr2 = []
-  #   @art_arr3 = []
-  #   @art_arr4 = []
-  #   @art_arr5 = []
-  #   @art_arr6 = []
-  #   @upd_art.each do |a|
-  #     @art_arr1 << a if a.category.priority == 1
-  #     @art_arr2 << a if a.category.priority == 2
-  #     @art_arr3 << a if a.category.priority == 3
-  #     @art_arr4 << a if a.category.priority == 4
-  #     @art_arr5 << a if a.category.priority == 5
-  #     @art_arr6 << a if a.category.priority == 6
-  #   end
-  # end
 end
