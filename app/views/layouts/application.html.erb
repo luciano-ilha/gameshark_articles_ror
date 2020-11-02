@@ -1,15 +1,67 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GamesharkArticlesRor</title>
+    <title>Gameshark Articles Ror</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= favicon_link_tag 'gamesharklogo.png' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-container-left">
+        <%= image_tag "gamesharklogo.png" %>
+        <h2>gaMEsHArk</h2>
+        <p></p>
+      </div>
+      <div class="navbar-container-middle">
+        <%= link_to "Home", root_path %>
+        <%= link_to "What's New", category_path(1) %>
+        <%= link_to "Action", category_path(2) %>
+        <%= link_to "Sports", category_path(3) %>
+        <%= link_to "FPS", category_path(4) %>
+        <%= link_to "RPG", category_path(5) %>
+        <%= link_to "Terror", category_path(6) %>
+      </div>
+      <div class="navbar-container-right">
+        <% if logged_in? %>
+          <span><%= current_user.username %></span>
+          <%= link_to 'New Article', new_article_path, class: "btn btn-default" %>
+          <%= link_to 'Logout', logout_path, class: "btn btn-default", method: :delete %>
+        <% else %>
+        <%= link_to 'Login', login_path, class: "btn btn-default" %>
+        <%= link_to 'Register', new_user_path,class: "btn btn-default" %>
+        <%= image_tag "search.png" %>
+        <% end %>
+      </div>
+    </div>
+  </nav>
   <body>
-    <%= yield %>
+    <p><%= flash[:success] %></p>
+    <p><%= flash[:error] %></p>
+    <div class="main-container">
+      <%= yield %>
+    </div>
   </body>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-container-left">
+        <%= image_tag "gamesharklogo.png" %>
+        <h2>gaMEsHArk</h2>
+        <p></p>
+      </div>
+      <div class="footer-container-middle">
+        <span class="footer-container-middle-item1">Privacy Policy</span>
+        <span class="footer-container-middle-item2">Terms & Conditions</span>
+        <span class="footer-container-middle-item3">Copyright 2020. All rights reserved.</span>
+      </div>
+      <div class="footer-container-right">
+        <span class="footer-container-right-item1">Connect with us :</span>
+        <%= image_tag "twitter-icon.png" %>
+        <%= image_tag "instagram-icon.svg" %>
+        <%= image_tag "facebook-icon.svg" %>
+      </div>
+    </div>
+  </footer>
 </html>

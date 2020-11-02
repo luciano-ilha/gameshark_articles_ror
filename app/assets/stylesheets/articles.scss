@@ -1,0 +1,197 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+// Index page
+.cat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: 28rem;
+
+  &-item {
+    background-position: center;
+    background-size: cover;
+
+    h2 {
+      a {
+        font-family: 'Nunito-Regular', sans-serif;
+        font-weight: bold;
+        left: 1.5rem;
+        text-decoration: underline;
+        text-decoration-color: #fa6000;
+        font-size: 1.9rem;
+        position: relative;
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 0.8rem;
+        border-radius: 1rem;
+        color: white;
+      }
+    }
+
+    h3 {
+      width: 90%;
+      line-height: 1.8rem;
+
+      a {
+        font-family: 'Nunito-Regular', sans-serif;
+        font-weight: bold;
+        left: 1.5rem;
+        top: 13rem;
+        font-size: 1.4rem;
+        position: relative;
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 0.8rem;
+        border-radius: 1rem;
+        color: white;
+      }
+    }
+  }
+}
+
+.main-article {
+  height: 55rem;
+  background-size: cover;
+
+  p,
+  h1 {
+    font-family: 'Nunito-Regular', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    left: 5rem;
+    top: 35rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.8rem;
+    border-radius: 1rem;
+  }
+
+  p {
+    width: 93%;
+
+    a {
+      color: white;
+      font-size: 1.7rem;
+    }
+  }
+
+  h1 {
+    a {
+      color: #fa6000;
+      font-size: 3rem;
+
+      &:hover {
+        color: #ff9d60;
+      }
+    }
+  }
+}
+
+// Show page
+.art-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 55rem;
+  background-size: cover;
+
+  h2 {
+    align-self: flex-start;
+    position: relative;
+    left: 25rem;
+    bottom: 15rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.8rem;
+    border-radius: 1rem;
+    text-decoration: underline;
+    text-decoration-color: #fa6000;
+  }
+
+  h1 {
+    font-family: 'Nunito-Regular', sans-serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #fa6000;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.8rem;
+    border-radius: 1rem;
+  }
+}
+
+.art-container {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  width: 60%;
+
+  p {
+    font-family: 'Nunito-Regular', sans-serif;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+  }
+
+  .btn {
+    font-family: 'Nunito-Regular', sans-serif;
+    font-weight: bold;
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+    background-color: #fa7c37;
+    color: white;
+
+    &:hover {
+      background-color: #847f7b;
+    }
+  }
+}
+
+// New article page
+.new-art-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85rem;
+  background-image: url(gamer.jpg);
+  background-position: center;
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(249, 134, 67, 0.5);
+    padding: 0 3rem 2rem;
+
+    h1,
+    span {
+      display: block;
+      font-family: 'Nunito-Regular', sans-serif;
+      font-weight: bolder;
+      color: white;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+      align-self: center;
+    }
+
+    span {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 0.8rem;
+      padding-left: 0.8rem;
+    }
+
+    span:nth-child(4),
+    span:nth-child(6),
+    span:nth-child(8),
+    span:last-child {
+      color: black;
+    }
+  }
+}
