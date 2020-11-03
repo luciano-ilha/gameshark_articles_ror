@@ -14,7 +14,7 @@ It's a games article desktop app that allows users to post their articles in sev
 
 ## Live Demo
 
-[Gameshark-articles-ror](https://gameshark-articles-ror.herokuapp.com/)
+[Gameshark Articles](https://gameshark-articles-ror.herokuapp.com/)
 
 
 ### Prerequisites
