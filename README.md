@@ -135,7 +135,7 @@ Open `http://localhost:3000/` in your browser.
 
 - Github: [@Luciano ilha](https://github.com/luciano-ilha)
 - Twitter: [@CarbonellIlha](https://twitter.com/CarbonellIlha )
-- Linkedin: [@Luciano ilha](hhttps://www.linkedin.com/in/luciano-carbonell-188115a0/)
+- Linkedin: [@Luciano ilha](https://www.linkedin.com/in/luciano-carbonell/)
 
 ## 🤝 Contributing
 
