@@ -1,0 +1,43 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70rem;
+  background-image: url(gta5.jpg);
+  background-position: center;
+  background-size: cover;
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1.3rem 3rem 3rem;
+
+    &-field {
+      padding-bottom: 2.8rem;
+    }
+
+    h1,
+    span {
+      display: block;
+      font-family: 'Nunito-Regular', sans-serif;
+      font-weight: bolder;
+    }
+
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 4rem;
+      align-self: center;
+    }
+
+    span {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

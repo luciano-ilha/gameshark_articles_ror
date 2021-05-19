@@ -1,0 +1,230 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "articles";
+@import "users";
+@import "sessions";
+@import "categories";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* stylelint-disable */
+@font-face {
+  font-family: 'Nunito-Regular';
+  src: url(font-path('Nunito-Regular.ttf')) format('truetype');
+}
+/* stylelint-enable */
+
+a:-webkit-any-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-container-right,
+.footer-container-middle,
+.footer-container-left,
+.footer-container,
+.footer,
+.navbar-container-right,
+.navbar-container-middle,
+.navbar-container-left,
+.navbar-container,
+.navbar {
+  display: flex;
+}
+
+.footer-container-right,
+.footer-container-middle,
+.footer-container-left,
+.footer,
+.navbar-container-right,
+.navbar-container-middle,
+.navbar-container-left,
+.navbar {
+  align-items: center;
+}
+
+.navbar {
+  margin: 0 auto 2rem;
+  padding: 0 5rem;
+  height: 9rem;
+
+  &-container {
+    margin: 0 auto;
+    height: 9rem;
+    width: 98%;
+
+    &-left {
+      padding-right: 2rem;
+      width: 30%;
+
+      img {
+        width: 12rem;
+        margin-right: 1.8rem;
+      }
+
+      h2 {
+        font-family: 'Nunito-Regular', sans-serif;
+        font-weight: bolder;
+        color: #4e443e;
+      }
+
+      p {
+        position: relative;
+        bottom: 1.8rem;
+        left: 0.3rem;
+        align-self: flex-end;
+        width: 1.3rem;
+        height: 1.3rem;
+        background-color: #f76108;
+        border-radius: 50%;
+      }
+    }
+
+    &-middle {
+      width: 40%;
+      justify-content: space-evenly;
+
+      a {
+        font-family: 'Nunito-Regular', sans-serif;
+        font-weight: bold;
+        color: #847f7b;
+        font-size: 1.7rem;
+
+        &:hover {
+          color: #fa7c37;
+        }
+      }
+    }
+
+    &-right {
+      width: 30%;
+      justify-content: flex-end;
+
+      span {
+        font-family: 'Nunito-Regular', sans-serif;
+        font-weight: bold;
+        font-size: 2rem;
+        color: #847f7b;
+        margin-right: 1.8rem;
+      }
+
+      .btn {
+        font-family: 'Nunito-Regular', sans-serif;
+        font-weight: bold;
+        margin-right: 1.5rem;
+        font-size: 1.5rem;
+        background-color: #fa7c37;
+        color: white;
+
+        &:hover {
+          background-color: #847f7b;
+        }
+      }
+
+      img {
+        width: 3rem;
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}
+
+.footer {
+  margin: 0 auto;
+  height: 6rem;
+  background-color: #4e443e;
+
+  &-container {
+    margin: 0 auto;
+    height: 6rem;
+    width: 98%;
+
+    &-left {
+      padding: 2rem;
+      width: 30%;
+
+      img {
+        width: 5rem;
+        margin-right: 1.2rem;
+      }
+
+      h2 {
+        position: relative;
+        bottom: 0.5rem;
+        font-family: 'Nunito-Regular', sans-serif;
+        font-size: 2.2rem;
+        font-weight: bolder;
+        color: white;
+      }
+
+      p {
+        position: relative;
+        top: 0.9rem;
+        left: 0.5rem;
+        width: 1.3rem;
+        height: 1.3rem;
+        background-color: #f76108;
+        border-radius: 50%;
+      }
+    }
+
+    &-middle {
+      width: 40%;
+      justify-content: center;
+
+      &-item3,
+      &-item2,
+      &-item1 {
+        font-family: 'Nunito-Regular', sans-serif;
+        font-size: 1.5rem;
+        font-weight: bolder;
+      }
+
+      &-item2,
+      &-item1 {
+        color: #f76108;
+        margin-right: 1.5rem;
+      }
+
+      &-item3 {
+        color: white;
+      }
+    }
+
+    &-right {
+      width: 30%;
+      justify-content: flex-end;
+
+      &-item1 {
+        font-family: 'Nunito-Regular', sans-serif;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: white;
+        margin-right: 1.2rem;
+      }
+
+      img {
+        width: 2.2rem;
+        margin-right: 0.8rem;
+        filter: invert(72%) sepia(73%) saturate(6586%) hue-rotate(356deg) brightness(97%) contrast(100%);
+      }
+    }
+  }
+}
