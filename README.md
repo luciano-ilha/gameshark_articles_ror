@@ -1,6 +1,6 @@
 # Gameshark Articles
 
-It's a games article desktop app that allows users to post their articles in several categories like What's New, Action, Sports, FPS, RPG e Terror. A user can read an article and upvote or downvote any created article. These articles are ordered to show at the front banner the article with the best score from these votes in total. In the categories section, the user can see the articles for that particular category ordered by the last one created, this last one is the one displayed in the category banner on the "home" page.
+A games article desktop app that allows users to post their articles in several categories, such as What's New, Action, Sports, etc. Users can read an article and upvote or downvote any created article, and each article contains the total number of votes. Users can see the articles for any particular category ordered by the most recently created, and the most recent one is displayed in the category banner on the "home" page.
 
 ![Screenshot](app/assets/images/project-screenshot1.png)
 
